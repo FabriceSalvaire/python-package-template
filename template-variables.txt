@@ -1,0 +1,5 @@
+@domain@
+@licence_header_description@
+@project_name@
+@project_url@
+@year@
