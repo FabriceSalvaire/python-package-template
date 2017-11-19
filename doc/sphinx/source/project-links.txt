@@ -20,8 +20,8 @@
 .. |@package_name@HomePage| replace:: @package_name@ Home Page
 .. _@package_name@HomePage: @project_url@
 
-.. |@package_name@@readthedocs-badge| image:: https://readthedocs.org/projects/@project_name@/badge/?version=latest
-   :target: http://@project_name@.readthedocs.org/en/latest
+.. |@package_name@@readthedocs-badge| image:: https://readthedocs.org/projects/@package_name@/badge/?version=latest
+   :target: http://@package_name@.readthedocs.org/en/latest
 
 .. |@package_name@@github| replace:: https://github.com/FabriceSalvaire/@package_name@
 .. .. _@package_name@@github: https://github.com/FabriceSalvaire/@package_name@

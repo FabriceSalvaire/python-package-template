@@ -17,11 +17,11 @@ If you want to **discuss or ask questions on @package_name@**, you can subscribe
 
 There is actually three lists running on Google Groups (*):
 
-`User List <https://groups.google.com/forum/#!forum/@project_name@-user>`_
+`User List <https://groups.google.com/forum/#!forum/@package_name@-user>`_
   List for @package_name@ users
-`Announce List <https://groups.google.com/forum/#!forum/@project_name@-announce>`_
+`Announce List <https://groups.google.com/forum/#!forum/@package_name@-announce>`_
   List for announcements regarding @package_name@ releases and development
-`Devel List <https://groups.google.com/forum/#!forum/@project_name@-devel>`_
+`Devel List <https://groups.google.com/forum/#!forum/@package_name@-devel>`_
   List for developers of @package_name@
 
 **If you encounter an issue, please fill an issue** on the `Issue Tracker <https://github.com/FabriceSalvaire/@package_name@/issues>`_.

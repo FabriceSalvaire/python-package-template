@@ -45,12 +45,12 @@ except:
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 # for directory in ,:
 
-@project_name@_path = os.path.abspath(os.path.join(__file__, *['..']*4))
-sys.path.insert(0, @project_name@_path)
+@package_name@_path = os.path.abspath(os.path.join(__file__, *['..']*4))
+sys.path.insert(0, @package_name@_path)
 
 ####################################################################################################
 
-exec(compile(open(os.path.join(@project_name@_path, 'setup_data.py')).read(), 'setup_data.py', 'exec'))
+exec(compile(open(os.path.join(@package_name@_path, 'setup_data.py')).read(), 'setup_data.py', 'exec'))
 
 ####################################################################################################
 #
@@ -72,6 +72,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
               'sphinxcontrib.getthecode',
+              'sphinx_sitemap',
               ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -305,3 +306,11 @@ intersphinx_mapping = {'http://docs.python.org/': None}
 
 # Don't work
 # mathjax_path = 'MathJax/MathJax.js'
+
+####################################################################################################
+#
+# sphinx-sitemap
+# https://github.com/jdillard/sphinx-sitemap
+#
+
+site_url = '@project_url@' # could use setup_dict

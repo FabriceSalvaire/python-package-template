@@ -37,9 +37,9 @@
 
    <div class="reduced-width">
 
-#########
- Simulate
-#########
+########
+ Title
+########
 
 .. image:: /_static/logo.png
    :alt: @package_name@ logo

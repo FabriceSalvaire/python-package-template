@@ -8,7 +8,7 @@ Up to now, the official url for @package_name@ is @project_url@
 
 *A permanent redirection will be implemented if the domain change in the future.*
 
-On Github, you can use the **@project_name@** `topic <https://github.com/search?q=topic%3A@project_name@&type=Repositories>`_ for repository related to @package_name@.
+On Github, you can use the **@package_name@** `topic <https://github.com/search?q=topic%3A@package_name@&type=Repositories>`_ for repository related to @package_name@.
 
 A typical `BibTeX <https://en.wikipedia.org/wiki/BibTeX>`_ citation would be, for example:
 
