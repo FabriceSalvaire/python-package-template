@@ -21,8 +21,6 @@
 ####################################################################################################
 
 import os
-import sys
-import subprocess
 
 ####################################################################################################
 
@@ -73,7 +71,7 @@ else:
 ####################################################################################################
 
 setup_dict = dict(
-    name='@project_name@',
+    name='@package_name@',
     version='0.1.0',
     author='Fabrice Salvaire',
     author_email='fabrice.salvaire@orange.fr',
@@ -81,27 +79,4 @@ setup_dict = dict(
     license='GPLv3',
     keywords= 'foo bar',
     url='https://github.com/FabriceSalvaire/@package_name@',
-    scripts=[],
-    packages=[
-        '@package_name@', # Fixme:
-        '@package_name@.Foo',
-    ],
-    # package_dir = {'@package_name@': '@package_name@'},
-    package_data={
-        '@package_name@.Config': ['logging.yml'],
-    },
-    long_description=long_description,
-    # cf. http://pypi.python.org/pypi?%3Aaction=list_classifiers
-    classifiers=[
-        'Topic :: Scientific/Engineering',
-        'Intended Audience :: Education',
-        'Development Status :: 2 - Pre-Alpha',
-        # 'Development Status :: 5 - Production/Stable',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.6',
-        ],
-    install_requires=[
-        'PyYAML',
-    ],
 )

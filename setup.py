@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 ####################################################################################################
 #
@@ -24,8 +24,8 @@
 
 import sys
 
-from distutils.core import setup
-# from setuptools import setup
+from setuptools import setup, find_packages
+setuptools_available = True
 
 ####################################################################################################
 
@@ -34,5 +34,39 @@ if sys.version_info < (3,):
     sys.exit(1)
 
 exec(compile(open('setup_data.py').read(), 'setup_data.py', 'exec'))
+
+####################################################################################################
+
+setup_dict.extend(dict(
+    # include_package_data=True, # Look in MANIFEST.in
+    packages=find_packages(exclude=['unit-test']),
+    scripts=[
+        'bin/...',
+    ],
+    package_data={
+        '@package_name@.Config': ['logging.yml'],
+    },
+
+    platforms='any',
+    zip_safe=False, # due to data files
+
+    # cf. http://pypi.python.org/pypi?%3Aaction=list_classifiers
+    classifiers=[
+        'Topic :: Scientific/Engineering',
+        'Intended Audience :: Education',
+        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
+        'License :: OSI Approved :: GNU General Public License (GPL)',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.6',
+        ],
+
+    install_requires=[
+        'PyYAML',
+    ],
+))
+
+####################################################################################################
 
 setup(**setup_dict)
