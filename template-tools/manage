@@ -20,6 +20,8 @@
 #
 ####################################################################################################
 
+# Fixme: 777 mode
+
 ####################################################################################################
 
 from datetime import datetime
@@ -67,7 +69,6 @@ argument_parser.add_argument('--compare',
 
 args = argument_parser.parse_args()
 
-
 ####################################################################################################
 
 class Installer:
@@ -90,6 +91,7 @@ class Installer:
             or path.startswith('.git/')
             or path.startswith('template-tools/')
             or path.startswith('old-template-tools/')
+            or path == 'README.md'
         )
 
     ##############################################
