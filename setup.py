@@ -37,7 +37,7 @@ exec(compile(open('setup_data.py').read(), 'setup_data.py', 'exec'))
 
 ####################################################################################################
 
-setup_dict.extend(dict(
+setup_dict.update(dict(
     # include_package_data=True, # Look in MANIFEST.in
     packages=find_packages(exclude=['unit-test']),
     scripts=[
@@ -54,11 +54,20 @@ setup_dict.extend(dict(
     classifiers=[
         'Topic :: Scientific/Engineering',
         'Intended Audience :: Education',
+
+        'Development Status :: 1 - Planning',
         'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Development Status :: 5 - Production/Stable',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
+        'Development Status :: 6 - Mature',
+        'Development Status :: 7 - Inactive',
+
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 3.4',
+
         'Programming Language :: Python :: 3.6',
         ],
 

@@ -79,4 +79,5 @@ setup_dict = dict(
     license='GPLv3',
     keywords= 'foo bar',
     url='https://github.com/FabriceSalvaire/@package_name@',
+    long_description=long_description,
 )

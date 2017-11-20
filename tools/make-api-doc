@@ -1,0 +1,17 @@
+#! /usr/bin/bash
+
+find @package_name@ -name "flycheck*.py" -exec rm {} \;
+find @package_name@ -name "parsetab.py" -exec rm {} \;
+
+api=doc/sphinx/source/api
+rm -rf ${api}
+
+echo
+echo Generate RST API files
+generate-rst-api @package_name@
+
+echo
+echo Run Sphinx
+pushd doc/sphinx/
+./make-html #--clean
+popd
