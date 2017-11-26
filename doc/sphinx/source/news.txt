@@ -9,5 +9,3 @@ V0 @year@-10-01
 -------------
 
 Started project
-
-.. End

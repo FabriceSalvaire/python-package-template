@@ -8,4 +8,3 @@
 =========
 
 `Roadmap @Github <https://github.com/FabriceSalvaire/@package_name@/milestones>`_
-

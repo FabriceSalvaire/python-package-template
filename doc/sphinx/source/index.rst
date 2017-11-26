@@ -153,5 +153,3 @@ If you want to donate to the project or need a more professional support.
   donate.rst
   related-projects.rst
   bibliography.rst
-
-.. End

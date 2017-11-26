@@ -27,5 +27,3 @@ Indexes
 
 ..  * :ref:`search`
 
-.. End
-
