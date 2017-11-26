@@ -38,6 +38,11 @@ exec(compile(open('setup_data.py').read(), 'setup_data.py', 'exec'))
 
 ####################################################################################################
 
+def read_requirement():
+    return [requirement.strip() for requirement in open('requirements.txt').readlines()]
+
+####################################################################################################
+
 setup_dict.update(dict(
     # include_package_data=True, # Look in MANIFEST.in
     packages=find_packages(exclude=['unit-test']),
@@ -73,9 +78,10 @@ setup_dict.update(dict(
         'Programming Language :: Python :: 3.6',
         ],
 
-    install_requires=[
-        'PyYAML',
-    ],
+    install_requires=read_requirement(),
+    # [
+    #     'PyYAML',
+    # ],
 ))
 
 ####################################################################################################
