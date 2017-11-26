@@ -22,6 +22,7 @@
 
 ####################################################################################################
 
+import glob
 import sys
 
 from setuptools import setup, find_packages
@@ -40,9 +41,10 @@ exec(compile(open('setup_data.py').read(), 'setup_data.py', 'exec'))
 setup_dict.update(dict(
     # include_package_data=True, # Look in MANIFEST.in
     packages=find_packages(exclude=['unit-test']),
-    scripts=[
-        'bin/...',
-    ],
+    scripts=glob.glob('bin/*'),
+    # [
+    #     'bin/...',
+    # ],
     package_data={
         '@package_name@.Config': ['logging.yml'],
     },
