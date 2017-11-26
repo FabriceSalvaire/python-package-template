@@ -47,5 +47,3 @@ News
 ====
 
 .. include:: news.txt
-
-.. End
