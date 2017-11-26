@@ -1,7 +1,7 @@
 ####################################################################################################
 #
 # @package_name@ - @licence_header_description@
-# Copyright (C) @year@ Salvaire Fabrice
+# Copyright (C) @year@ Fabrice Salvaire
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
