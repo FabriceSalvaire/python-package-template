@@ -21,7 +21,7 @@ Overview
 What is @package_name@ ?
 ---------------------
 
-@package_name@ is a Python module which implements a unit framework.
+@package_name@ is a Python module which implements ...
 
 Where is the Documentation ?
 ----------------------------
