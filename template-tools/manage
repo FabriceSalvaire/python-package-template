@@ -24,6 +24,7 @@
 
 from datetime import datetime
 
+from pathlib import Path
 import argparse
 import glob
 import os
@@ -35,8 +36,7 @@ import tempfile
 
 ####################################################################################################
 
-program_path = os.path.abspath(__file__)
-source_path = os.path.dirname(os.path.dirname(program_path))
+source_path = Path(__file__).resolve().parents[1]
 
 ####################################################################################################
 
@@ -82,14 +82,19 @@ args = argument_parser.parse_args()
 
 ####################################################################################################
 
+def to_path(path):
+    return Path(path).expanduser().absolute()
+
+####################################################################################################
+
 class Installer:
 
     ##############################################
 
     def __init__(self, source_path, destination_path, variables):
 
-        self._source_path = source_path
-        self._destination_path = destination_path
+        self._source_path = to_path(source_path)
+        self._destination_path = to_path(destination_path)
 
         self._variables = {'@{}@'.format(key):value for key, value in variables.items()}
 
@@ -161,6 +166,8 @@ class Installer:
     ##############################################
 
     def install_source(self, relative_path, force=False, dry_run=False):
+
+        # Fixme: relative_path is a dangling link
 
         dst_absolut_path, dst_relative_path = self.destination_path(relative_path)
         print(relative_path, '->', dst_relative_path)
@@ -261,7 +268,7 @@ variables = dict(
     year=str(datetime.now().year),
 )
 
-installer = Installer(args.source_path, os.path.realpath(args.path), variables)
+installer = Installer(args.source_path, args.path, variables)
 
 if args.install:
     installer.install(force=args.force, pattern=args.pattern, dry_run=args.dry_run)
